@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Image,Box,Text,Grid, SimpleGrid } from "@chakra-ui/react";
+import { Image,Box,Text,Grid, SimpleGrid, Heading } from "@chakra-ui/react";
 
 import html from "../assets/html.png";
 import css from "../assets/css.png";
@@ -17,6 +17,7 @@ import Git from "../assets/Git-Icon.png";
 import Netlify from "../assets/netlify.png"
 import heroku from "../assets/heroku.png"
 import vscode from "../assets/vscode.png"
+import { transform } from "framer-motion";
 
 
 
@@ -124,16 +125,17 @@ const Skills = () => {
   return (
     <Box id="skills" p="2%" bg="#191919">
      {/* bgGradient='linear(to-t, #000000, #111E46)'> */}
-        <Box>
-            <Text fontSize="4xl" color="#ec5b53">Skills</Text>
+        <Box textAlign="center">
+            <Heading size="2xl" color="#ec5b53" >Skills</Heading>
         </Box>
-         <SimpleGrid mt="40px" w="80%" m="auto" columns={[2,2,3]} gap={12} >
+         <SimpleGrid  w="80%" m="auto" mt="50px" columns={[2,2,3]} gap={12} >
             {/* className="w-full  gap-8 text-center mt-11 py-8 px-12 sm:px-0"> */}
           {techs.map(({ id, src, title, style }) => (
             <Box
             // bg="#1c1917"
             // 
               key={id}
+              _hover={{transform:"translateY(-20px)"}}
               textAlign="center"
               justifyContent="center"
               p="1.3rem"
@@ -148,15 +150,16 @@ const Skills = () => {
             </Box>
           ))}
         </SimpleGrid>
-        <Box mt="5%">
-            <Text fontSize="4xl" color="#ec5b53">Tools</Text>
+        <Box mt="5%" textAlign="center">
+            <Heading size="2xl" color="#ec5b53">Tools</Heading>
         </Box>
-         <SimpleGrid mt="40px" w="80%" m="auto" columns={[2,2,3]} gap={12} >
+         <SimpleGrid  w="80%" m="auto" mt="50px" columns={[2,2,3]} gap={12} >
             {/* className="w-full  gap-8 text-center mt-11 py-8 px-12 sm:px-0"> */}
           {tool.map(({ id, src, title, style }) => (
             <Box
             key={id}
             textAlign="center"
+            _hover={{transform:"translateY(-20px)"}}
             justifyContent="center"
             p="1.1rem"
             color="white"

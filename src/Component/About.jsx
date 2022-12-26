@@ -6,10 +6,12 @@ function About(){
     return(
         <Box id="about"
         bg="#191919" 
-        p="2%">
+        p="2%"
+        >
         {/* // bgGradient='linear(to-t, #000000, #111E46)'> */}
-            
-        <Heading color="#ec5b53"  >About</Heading>
+        <Box textAlign="center">
+        <Heading color="#ec5b53" size="2xl" >About</Heading>
+        </Box>
 
         <Flex p="2%" direction={{ base: 'column', md: 'column',lg:'row' }}>
             <Box w={{base:"100%",md:"100%",lg:"50%"}}>

@@ -3,7 +3,7 @@ import { Box, Button, Flex, IconButton, Image, Img, Switch} from "@chakra-ui/rea
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 // import { Link as ReachLink } from "@reach/router"
 import {Link} from "react-scroll"
-import logo from "../../assets/Logo3_trans.png"
+import logo from "../../assets/portLogo2-removebg2.png"
 import { useState } from "react"
 
 import resume from "../../assets/Shahzad_Malik_Resume.pdf"
@@ -17,7 +17,11 @@ return (
     <Flex h="100px" justifyContent="space-between"  position="sticky" top="0" bg="black"
     >
 
-       <Link smooth={true} offset={-100} duration={300} to="home"> <Image h="100px" w="200px"  src={logo}/></Link>
+       <Link smooth={true} offset={-100} duration={300} to="home"> 
+        <Box h="100px" mt={{base:"0px",md:"0px",lg:"0px"}}  alignItems="center" w={{base:"100px",md:"150px",lg:"200px"}} >
+         <Image ml="20px" w="100%" h="100%" src={logo}/>
+        </Box>
+        </Link>
 
 
         <Flex p="25px" display={{base:"none",md:"none",lg:"flex"}}>

@@ -6,6 +6,7 @@ import { FiExternalLink} from "react-icons/fi";
 import zara from "../assets/project/zaraclone.jpg"
 import clockify from "../assets/project/clockify.jpg"
 import Hubspot from "../assets/project/hubspot.jpg"
+import rentomojo from "../assets/project/RentomojoClone.jpg"
 // import {Githubcalendar} from "react-github-calendar"
 
 function Project(){
@@ -37,13 +38,25 @@ function Project(){
             tech:["JavaScript | ","HTML | ","CSS"],
             github:"https://github.com/Malik04121/average-cat-1068",
             netlify:"https://enchanting-stroopwafel-f01706.netlify.app/"
+        },
+        {
+            id:4,
+            name:"Rentomojo",
+            image:rentomojo,
+            detail:"Rentomojo is a website where user/customer can take appliances,electronics,furniture etc on monthly/yearly rental basis",
+            tech:[" React | "," NodeJs | "," JavaScript | "," HTML | "," Chakra_UI "],
+            github:"https://github.com/Ravi-047/likeable-wrench-2860",
+            netlify:"https://brilliant-zabaione-7cd572.netlify.app"
         }
     ]
 
 return(
     <Box id="project" bg="#191919">
      
-         <Heading color="#ec5b53">Projects</Heading>
+     <Box textAlign="center">
+            <Heading pt={{base:"5px",md:"15px",lg:"35px"}} size="2xl" color="#ec5b53">Projects</Heading>
+     </Box>
+
         {projdata.map(({id,name,image,detail,tech,github,netlify})=>(
         //  <Box key={id} w="80%" m="auto" bg="silver" mt="40px" p="1%">
             <Flex borderRadius={["15","30","30"]} key={id} w="77%" m="auto" color="black" bg="white" mt="40px" p="3%" gap="5%"

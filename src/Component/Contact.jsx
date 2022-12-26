@@ -14,10 +14,10 @@ const Contact = () => {
     {/* bgGradient='linear(to-t, #000000, #111E46)' */}
      
     {/* // className={styles.footer} id="contact"> */}
-      <Box w={{base:"80",md:"50%",lg:"50%"}} m="auto" >
+      <Box w={{base:"70",md:"50%",lg:"50%"}} m="auto" >
     {/* //   className={styles.container}> */}
         <Heading mt="2rem" textAlign="center">Get in Touch</Heading>
-        <Text fontSize={{base:"xl",md:"2xl",lg:"3xl"}} mt="2rem">
+        <Text fontSize={{base:"lg",md:"2xl",lg:"3xl"}} mt="2rem">
           One of my favourite things about developing web applications is the
           variety in projects. So if you want to collaborate or have some work
           for me , Get in touch and tell me what you have in mind. — I can’t

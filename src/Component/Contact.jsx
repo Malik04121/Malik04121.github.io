@@ -24,6 +24,8 @@ const Contact = () => {
           wait to hear all about it! 😇
           <br />
           Gmail: shehzadmalik123.sm@gmail.com
+          <br/>
+          Contact:9881239491
         </Text>
         <Flex gap={{base:"8%",md:"12%",lg:"15%"}} justifyContent="center" mt="2rem">
           <Link fontSize={{base:"30px",md:"35px",lg:"45px"}} href="tel:9881239491"

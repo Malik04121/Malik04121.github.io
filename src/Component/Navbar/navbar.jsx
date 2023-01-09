@@ -111,9 +111,9 @@ return (
                 <Link to="contact" >
                     <Button >Contact</Button>
                 </Link> 
-                <Link href={resume}   target="_blank" download >
-                    <Button  bg="#ec5b53">Resume</Button>
-                </Link>
+                {/* <Link href="https://drive.google.com/file/d/1e2QT4Cq4lxy0TopvVhVvWopNOtmIvQ1J/view?usp=sharing"  target="_blank"> */}
+                    <Button onClick={()=>window.open("https://drive.google.com/file/d/1e2QT4Cq4lxy0TopvVhVvWopNOtmIvQ1J/view?usp=sharing","_blank") }  bg="#ec5b53">Resume</Button>
+                {/* </Link> */}
             
         
 

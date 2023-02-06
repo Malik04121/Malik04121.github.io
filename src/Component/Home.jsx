@@ -1,5 +1,6 @@
 import { Flex,Box,Text,Image, Button, Heading, Link } from "@chakra-ui/react"
-import profile_pic from "../profile_pic.png"
+// import profile_pic from "../profile_pic.png"
+import profile_pic from "../assets/profile_full.png"
 import resume from "../assets/Shahzad_Malik_Resume.pdf"
 
 
@@ -21,7 +22,7 @@ return(
             <Link href={resume}   target="_blank" download
             
             
-            ><Button bg="#ec5b53" color="white" fontSize="2xl" w="40%" mt="2rem" h="50px" textAlign="center" alignItems="center"
+            ><Button _hover={{bg:"red"}} onClick={()=>window.open("https://drive.google.com/file/d/1e2QT4Cq4lxy0TopvVhVvWopNOtmIvQ1J/view?usp=sharing","_blank") } bg="#ec5b53" color="white" fontSize="2xl" w="40%" mt="2rem" h="50px" textAlign="center" alignItems="center"
             
             >Resume</Button></Link>
             {/* </Button> */}

@@ -14,7 +14,7 @@ function Navbar(){
 
 return (
 
-    <Flex h="100px" justifyContent="space-between"  position="sticky" top="0" bg="black"
+    <Flex h="100px" justifyContent="space-between"  position="sticky" top="0" bg="black" zIndex="1000"
     >
 
        <Link smooth={true} offset={-100} duration={300} to="home"> 
@@ -47,6 +47,9 @@ return (
            //   activeClass="active"
             //   spy={true}
            smooth={true} offset={-100} duration={300} to="contact" >Contact</Link></Button>
+           <Button  mr="50px" color="white" bg="none" fontSize="3xl" border="none"  variant='link' onClick={()=>window.open("https://drive.google.com/file/d/1e2QT4Cq4lxy0TopvVhVvWopNOtmIvQ1J/view?usp=sharing","_blank") }><a 
+           //   activeClass="active"
+             href={resume} target="_blank" download >Resume</a></Button>
             {/* <Button w="80px" mr="50px">DARK THEME</Button> */}
         </Flex>
 
@@ -111,8 +114,8 @@ return (
                 <Link to="contact" >
                     <Button >Contact</Button>
                 </Link> 
-                {/* <Link href="https://drive.google.com/file/d/1e2QT4Cq4lxy0TopvVhVvWopNOtmIvQ1J/view?usp=sharing"  target="_blank"> */}
-                    <Button onClick={()=>window.open("https://drive.google.com/file/d/1e2QT4Cq4lxy0TopvVhVvWopNOtmIvQ1J/view?usp=sharing","_blank") }  bg="#ec5b53">Resume</Button>
+                {/* <Link href={resume}  target="_blank"> */}
+                    <Button onClick={()=>window.open("https://drive.google.com/file/d/1e2QT4Cq4lxy0TopvVhVvWopNOtmIvQ1J/view?usp=sharing","_blank") }  bg="#ec5b53"><a href={resume}  target="_blank" download>Resume</a></Button>
                 {/* </Link> */}
             
         

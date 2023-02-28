@@ -19,7 +19,7 @@ return(
          <Heading as="h2" mt="3%" fontSize={["1.5em","2.5em"]}  >Full Stack Web Developer</Heading>
          <Text color="black" mt="8%" fontSize={["md","md","xl"]}>I love to build website using the latest frond-end and backend technologies.</Text>
          {/* <Button w="300px" mt="5vh"> */}
-            <Link href={resume}   target="_blank" download
+            <Link href={resume}   target="_blank" download="fw20_1215-Shahzad-Malik-Resume"
             
             
             ><Button _hover={{bg:"red"}} onClick={()=>window.open("https://drive.google.com/file/d/1e2QT4Cq4lxy0TopvVhVvWopNOtmIvQ1J/view?usp=sharing","_blank") } bg="#ec5b53" color="white" fontSize="2xl" w="40%" mt="2rem" h="50px" textAlign="center" alignItems="center"

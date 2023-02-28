@@ -16,13 +16,15 @@ return(
           <Image w="500px" src="https://github-readme-stats.vercel.app/api/top-langs?username=malik04121&show_icons=true&locale=en&layout=compact&theme=great-gatsby" alt="malik04121" /></Text>
         <Text mt={{base:"20px",md:"0",lg:"0"}} w={{base:"250px",md:"350px",lg:"500px"}}><Image src="https://github-readme-stats.vercel.app/api?username=malik04121&show_icons=true&locale=en&theme=great-gatsby" alt="malik04121" /></Text>
         </Flex>
-         <Box m="auto" mb="20px" w="60%">
+         <Box m="auto" mb="20px" w="80%">
          <GitHubCalendar
           username="malik04121"
           blockSize={15}
           blockMargin={5}
+          width="100%"
           // theme={themename}
-          fontSize={16}          
+          // fontSize={{base:5,md:15,lg:20}}          
+          fontSize={15}
         />
         </Box>
     </Box>

@@ -1,4 +1,4 @@
-import { Box, Button, Flex, IconButton, Image, Img, Switch} from "@chakra-ui/react"
+import { Box, Button, Flex, IconButton, Image, Img, Switch, Text} from "@chakra-ui/react"
 // import Skill from "../Skills"
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 // import { Link as ReachLink } from "@reach/router"
@@ -14,42 +14,53 @@ function Navbar(){
 
 return (
 
-    <Flex h="100px" justifyContent="space-between"  position="sticky" top="0" bg="black" zIndex="1000"
+    <Flex h="80px" justifyContent="space-between" alignItems="center" position="sticky" top="0" bg="black" zIndex="1000"
     >
 
-       <Link smooth={true} offset={-100} duration={300} to="home"> 
-        <Box h="100px" mt={{base:"0px",md:"0px",lg:"0px"}}  alignItems="center" w={{base:"100px",md:"150px",lg:"200px"}} >
-         <Image ml="20px" w="100%" h="100%" src={logo}/>
+        <Box   alignItems="center"
+         w={{base:"100px",md:"150px",lg:"200px"}} 
+         ml="100px"
+         h="60%"
+        >
+       <Link smooth={true}  duration={300}  to="home"> 
+       
+          <Flex  alignItems="center" gap="5px" h="90%" _hover={{ cursor: "pointer" }} >
+            <Box bg="#CCD9D9" display="flex"  alignItems="center" borderRadius="5px"
+  justifyContent="center" w="70px" h="100%" p="auto"><Text fontSize="xl" color="#ec5b53" as="b">SM</Text> </Box>
+            <Text color="white" fontSize="xl" fontFamily="Playfair Display" as="b" fontStyle="italic">Portfolio</Text>
+          </Flex>
+          </Link>
+
+         {/* <Image ml="20px" w="100%" h="100%" src={logo}/> */}
         </Box>
-        </Link>
 
 
         <Flex p="25px" display={{base:"none",md:"none",lg:"flex"}}>
-            <Button color="white" bg="none" fontSize="3xl" border="none"  colorScheme='teal' variant='link'  mr="50px" ><Link  
+            <Button color="white" bg="none" fontSize="2xl" border="none"  colorScheme='teal' variant='link'  mr="50px" ><Link  
            //   activeClass="active"
             //   spy={true}
            smooth={true} offset={-100} duration={300} to="home" >Home</Link></Button>
-            <Button  mr="50px" color="white" bg="none" fontSize="3xl" border="none"  variant='link'>
+            <Button  mr="50px" color="white" bg="none" fontSize="2xl" border="none"  variant='link'>
             <Link  
            //   activeClass="active"
             //   spy={true}
             // fontSize="120px"
            smooth={true} offset={-100} duration={300} to="about" >About</Link></Button>
-            <Button  mr="50px" color="white" bg="none" fontSize="3xl" border="none"  variant='link'><Link  
+            <Button  mr="50px" color="white" bg="none" fontSize="2xl" border="none"  variant='link'><Link  
            //   activeClass="active"
             //   spy={true}
            smooth={true} offset={-100} duration={300} to="skills" >Skills</Link></Button>
-            <Button  color="white" bg="none" fontSize="3xl" border="none"  variant='link' mr="50px"><Link  
+            <Button  color="white" bg="none" fontSize="2xl" border="none"  variant='link' mr="50px"><Link  
            //   activeClass="active"
             //   spy={true}
            smooth={true} offset={-100} duration={300} to="project" >Projects</Link></Button>
-            <Button  mr="50px" color="white" bg="none" fontSize="3xl" border="none"  variant='link'><Link  
+            <Button  mr="50px" color="white" bg="none" fontSize="2xl" border="none"  variant='link'><Link  
            //   activeClass="active"
             //   spy={true}
            smooth={true} offset={-100} duration={300} to="contact" >Contact</Link></Button>
-           <Button  mr="50px" color="white" bg="none" fontSize="3xl" border="none"  variant='link' onClick={()=>window.open("https://drive.google.com/file/d/1e2QT4Cq4lxy0TopvVhVvWopNOtmIvQ1J/view?usp=sharing","_blank") }><a 
+           <Button  mr="50px" color="white" bg="none" fontSize="2xl" border="none"  variant='link' onClick={()=>window.open("https://drive.google.com/file/d/1e2QT4Cq4lxy0TopvVhVvWopNOtmIvQ1J/view?usp=sharing","_blank") }><a 
            //   activeClass="active"
-             href={resume} target="_blank" download >Resume</a></Button>
+             href={resume} target="_blank" download="fw20_1215-Shahzad-Malik-Resume" >Resume</a></Button>
             {/* <Button w="80px" mr="50px">DARK THEME</Button> */}
         </Flex>
 
@@ -115,7 +126,7 @@ return (
                     <Button >Contact</Button>
                 </Link> 
                 {/* <Link href={resume}  target="_blank"> */}
-                    <Button onClick={()=>window.open("https://drive.google.com/file/d/1e2QT4Cq4lxy0TopvVhVvWopNOtmIvQ1J/view?usp=sharing","_blank") }  bg="#ec5b53"><a href={resume}  target="_blank" download>Resume</a></Button>
+                    <Button onClick={()=>window.open("https://drive.google.com/file/d/1e2QT4Cq4lxy0TopvVhVvWopNOtmIvQ1J/view?usp=sharing","_blank") }  bg="#ec5b53"><a href={resume}  target="_blank" download="fw20_1215-Shahzad-Malik-Resume">Resume</a></Button>
                 {/* </Link> */}
             
         

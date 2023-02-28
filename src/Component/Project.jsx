@@ -19,7 +19,7 @@ function Project(){
             detail:"ZARA is an e-commerce clothing website.Zara specializes in fast fashion, and products include clothing, accessories, shoes, beauty products and many more things.",
             tech:[" React | "," NodeJs | "," JavaScript | "," HTML | "," Chakra_UI "],
             github:"https://github.com/Malik04121/high-fruit-9045",
-            netlify:"https://shiny-jelly-6c543a.netlify.app/"
+            netlify:"https://zara-clone-ten.vercel.app/"
         },
         {
             id:2,
@@ -59,21 +59,30 @@ return(
 
         {projdata.map(({id,name,image,detail,tech,github,netlify})=>(
         //  <Box key={id} w="80%" m="auto" bg="silver" mt="40px" p="1%">
-            <Flex borderRadius={["15","30","30"]} key={id} w="77%" m="auto" color="black" bg="white" mt="40px" p="3%" gap="5%"
+            <Flex borderRadius={["15","30","30"]} key={id} w="77%" m="auto" color="black" bg="white" mt="40px" p="3%" gap="2%"
             direction={{ base: 'column', md: 'column',lg:'row' }}>
+                <Box  w={{base:"100%",md:"100%",lg:"60%"}} >
                 <Image  border="1px solid black"
-                borderRadius={["15px","30px","30px"]}
-                w={{base:"100%",md:"100%",lg:"50%"}}
+                borderRadius={["15px","20px","20px"]}
+                // objectFit="cover"
+                // w="100%"
+                h="100%"
+                w={{base:"100%",md:"100%",lg:"100%"}}
+                // objectFit="cover"
                 //  boxSize={{base:"100%",md:"100%",lg:"50%"}} 
                 // boxSize="300px"
                 // h="500px"
                 src={image} />
-                <Box alignItems="end" mt={{base:"5%",md:"10%",lg:"10%"}}>
-                    <Heading fontSize={{base:"xl",md:"4xl",lg:"4xl"}}  mb="20px" >{name}</Heading>
+                </Box>
+
+                
+                <Box alignItems="end" mt={{base:"5%",md:"10%",lg:"10%"}}  w={{base:"100%",md:"100%",lg:"40%"}}>
+                    <Heading fontSize={{base:"lg",md:"2xl",lg:"3xl"}}  mb="20px" >{name}</Heading>
                     <Text fontSize={{base:"sm",md:"lg",lg:"lg"}}>{detail}</Text>
                     <Flex mt="10px" mb="20px">
                         {tech.map((stack)=>(
-                            <Text fontSize={{base:"small",md:"large",lg:"large"}} fontWeight="bold">{stack}</Text>
+
+                            <Text fontSize={{base:"small",md:"large",lg:"large"}} fontWeight="semibold">{stack}</Text>
                         ))}
                     </Flex>
                     <Flex bg="black" gap="20px" color="white"
@@ -83,8 +92,8 @@ return(
                     p={["2%"]}
                     justifyContent="center" 
                     fontSize={{base:"30px",md:"40px",lg:"50px"}}>
-                    <Link  href={github} ><FaGithub/></Link>
-                    <Link href={netlify}><FiExternalLink/></Link>
+                    <Link  href={github} target="_blank" ><FaGithub/></Link>
+                    <Link href={netlify} target="_blank"><FiExternalLink/></Link>
                     </Flex>
                    
                 </Box>

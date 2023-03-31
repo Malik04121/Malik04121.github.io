@@ -1,12 +1,13 @@
-import { Box, Flex, Heading, Img,Text,Link, Image } from "@chakra-ui/react"
+import { Box, Flex, Heading, Img,Text,Link, Image, Grid } from "@chakra-ui/react"
 import { FaPhoneAlt,FaGithub } from "react-icons/fa";
 import { FiExternalLink} from "react-icons/fi";
-
+import { Fade } from "react-awesome-reveal";
 
 import zara from "../assets/project/zaraclone.jpg"
 import clockify from "../assets/project/clockify.jpg"
 import Hubspot from "../assets/project/hubspot.jpg"
 import rentomojo from "../assets/project/RentomojoClone.jpg"
+import techhunt from "../assets/project/techhunt.png"
 // import {Githubcalendar} from "react-github-calendar"
 
 function Project(){
@@ -32,14 +33,15 @@ function Project(){
         },
         {
             id:3,
-            name:"Hubspot",
-            image:Hubspot,
-            detail:"HubSpot is a website for developers and marketers of software products for inbound marketing, sales, and customer service",
-            tech:["JavaScript | ","HTML | ","CSS"],
-            github:"https://github.com/Malik04121/average-cat-1068",
-            netlify:"https://enchanting-stroopwafel-f01706.netlify.app/"
+            name:"TechHunt",
+            image:techhunt,
+            detail:"Techhunt is an affordable online electronics store that offers the latest gadgets with exceptional customer service. Shop for smartphones, laptops, and more from top brands. Experience the future of electronics shopping today!",
+            tech:["React |","MongoDB |","NodeJS |","Express |","ChakraUI "],
+            github:"https://github.com/Malik04121/Tech-Hunt",
+            netlify:"https://prd-ecommerce-18no.vercel.app/"
         },
         {
+
             id:4,
             name:"Rentomojo",
             image:rentomojo,
@@ -51,53 +53,64 @@ function Project(){
     ]
 
 return(
-    <Box id="project" bg="#191919">
+    <Box id="project" bg="#191919" p="2%">
      
      <Box textAlign="center">
-            <Heading pt={{base:"5px",md:"15px",lg:"35px"}} size="2xl" color="#ec5b53">Projects</Heading>
+            <Heading pt={{base:"5px",md:"15px",lg:"35px"}} size="xl" color="#ec5b53">Projects</Heading>
      </Box>
-
+     
         {projdata.map(({id,name,image,detail,tech,github,netlify})=>(
         //  <Box key={id} w="80%" m="auto" bg="silver" mt="40px" p="1%">
-            <Flex borderRadius={["15","30","30"]} key={id} w="77%" m="auto" color="black" bg="white" mt="40px" p="3%" gap="2%"
-            direction={{ base: 'column', md: 'column',lg:'row' }}>
-                <Box  w={{base:"100%",md:"100%",lg:"60%"}} >
+        
+
+            <Flex borderRadius={["15","30","30"]} key={id} w="77%" m="auto" color="black" bg="white" mt="40px" p="3%" gap={{base:"5%",md:"10%",lg:"2%"}}
+            direction={{ base: 'column', md: 'column',lg:'row' }} transition="transform 0.2s ease-in-out"
+             _hover={{ transform: "scale(1.05)" }} >
+                <Box  w={{base:"100%",md:"100%",lg:"60%"}}  >
+                <Box  w={{base:"100%",md:"100%",lg:"100%"}} h="100%" >
                 <Image  border="1px solid black"
                 borderRadius={["15px","20px","20px"]}
-                // objectFit="cover"
-                // w="100%"
+                
+                objectFit="fill"
                 h="100%"
                 w={{base:"100%",md:"100%",lg:"100%"}}
-                // objectFit="cover"
-                //  boxSize={{base:"100%",md:"100%",lg:"50%"}} 
-                // boxSize="300px"
-                // h="500px"
                 src={image} />
                 </Box>
-
                 
-                <Box alignItems="end" mt={{base:"5%",md:"10%",lg:"10%"}}  w={{base:"100%",md:"100%",lg:"40%"}}>
+
+                </Box>
+
+                <Box alignItems="end" 
+                pt={{base:"3%",md:"3%",lg:"5%"}}
+                  w={{base:"100%",md:"100%",lg:"40%"}}
+                  >
+                <Fade direction="right" cascade damping={0.2}>
+
                     <Heading fontSize={{base:"lg",md:"2xl",lg:"3xl"}}  mb="20px" >{name}</Heading>
                     <Text fontSize={{base:"sm",md:"lg",lg:"lg"}}>{detail}</Text>
-                    <Flex mt="10px" mb="20px">
+                    {/* <Grid templateColumns='repeat(4,1fr)' mt="10px" mb="20px" gap="0px"> */}
+                       <Flex mt="10px" mb="20px">
                         {tech.map((stack)=>(
 
-                            <Text fontSize={{base:"small",md:"large",lg:"large"}} fontWeight="semibold">{stack}</Text>
+                            <Text fontSize={{base:"small",md:"large",lg:"medium"}} fontWeight="semibold">{stack}</Text>
                         ))}
-                    </Flex>
+                    {/* </Grid> */}
+                     </Flex>
                     <Flex bg="black" gap="20px" color="white"
                     w="40%"
                     ml="60%"
                     borderRadius={["12px"]}
-                    p={["2%"]}
+                    p={["1%"]}
                     justifyContent="center" 
-                    fontSize={{base:"30px",md:"40px",lg:"50px"}}>
+                    fontSize={{base:"30px",md:"40px",lg:"30px"}}>
                     <Link  href={github} target="_blank" ><FaGithub/></Link>
                     <Link href={netlify} target="_blank"><FiExternalLink/></Link>
                     </Flex>
+                </Fade>
                    
                 </Box>
             </Flex>
+            // </Fade>
         //  </Box>     
         ))}
     

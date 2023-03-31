@@ -4,7 +4,7 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 // import { Link as ReachLink } from "@reach/router"
 import {Link} from "react-scroll"
 import logo from "../../assets/portLogo2-removebg2.png"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import resume from "../../assets/Shahzad_Malik_Resume.pdf"
 
@@ -12,21 +12,24 @@ import resume from "../../assets/Shahzad_Malik_Resume.pdf"
 function Navbar(){
     const [display,setDisplay]=useState("none")
 
+
 return (
 
     <Flex h="80px" justifyContent="space-between" alignItems="center" position="sticky" top="0" bg="black" zIndex="1000"
     >
 
+
         <Box   alignItems="center"
          w={{base:"100px",md:"150px",lg:"200px"}} 
-         ml="100px"
+         ml="10%"
          h="60%"
+        //  bg="red"
         >
        <Link smooth={true}  duration={300}  to="home"> 
        
           <Flex  alignItems="center" gap="5px" h="90%" _hover={{ cursor: "pointer" }} >
             <Box bg="#CCD9D9" display="flex"  alignItems="center" borderRadius="5px"
-  justifyContent="center" w="70px" h="100%" p="auto"><Text fontSize="xl" color="#ec5b53" as="b">SM</Text> </Box>
+  justifyContent="center" w="70px" h="100%" p="5%"><Text fontSize="xl" color="#ec5b53" as="b">SM</Text> </Box>
             <Text color="white" fontSize="xl" fontFamily="Playfair Display" as="b" fontStyle="italic">Portfolio</Text>
           </Flex>
           </Link>
@@ -78,11 +81,13 @@ return (
         />
 
        <Flex
-        w='35vw'
+        w='45vw'
+        
         display={display}
         bgColor="gray.50"
         zIndex={20}
-        h="50vh"
+        // h="65vh"
+        pb="40px"
         pos="fixed"
         top="0"
         right="0"
@@ -110,8 +115,8 @@ return (
 
         >
             
-                <Link to="home"  >
-                    <Button >Home</Button>
+                <Link to="home" >
+                    <Button  >Home</Button>
                 </Link> 
                 <Link to="about" >
                     <Button >About</Button>

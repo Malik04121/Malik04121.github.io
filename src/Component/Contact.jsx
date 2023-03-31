@@ -14,7 +14,7 @@ const Contact = () => {
     {/* bgGradient='linear(to-t, #000000, #111E46)' */}
      
     {/* // className={styles.footer} id="contact"> */}
-      <Box w={{base:"70",md:"50%",lg:"50%"}} m="auto" >
+      <Box w={{base:"70",md:"70%",lg:"55%"}} m="auto" >
     {/* //   className={styles.container}> */}
         <Heading mt="2rem" textAlign="center">Get in Touch</Heading>
         <Text fontSize={{base:"lg",md:"2xl",lg:"3xl"}} mt="2rem" letterSpacing="wide">

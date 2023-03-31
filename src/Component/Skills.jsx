@@ -126,7 +126,7 @@ const Skills = () => {
     <Box id="skills" p="2%" bg="#191919">
      {/* bgGradient='linear(to-t, #000000, #111E46)'> */}
         <Box textAlign="center">
-            <Heading size="2xl" color="#ec5b53" >Skills</Heading>
+            <Heading size="xl" color="#ec5b53" >Skills</Heading>
         </Box>
          <SimpleGrid  w="80%" m="auto" mt="50px" columns={[2,2,3]} gap={12} >
             {/* className="w-full  gap-8 text-center mt-11 py-8 px-12 sm:px-0"> */}
@@ -151,7 +151,7 @@ const Skills = () => {
           ))}
         </SimpleGrid>
         <Box mt="5%" textAlign="center">
-            <Heading size="2xl" color="#ec5b53">Tools</Heading>
+            <Heading size="xl" color="#ec5b53">Tools</Heading>
         </Box>
          <SimpleGrid  w="80%" m="auto" mt="50px" columns={[2,2,3]} gap={12} >
             {/* className="w-full  gap-8 text-center mt-11 py-8 px-12 sm:px-0"> */}

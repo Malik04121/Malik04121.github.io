@@ -48,7 +48,7 @@ function Project(){
             detail:"Rentomojo is a website where user/customer can take appliances,electronics,furniture etc on monthly/yearly rental basis",
             tech:[" React | "," NodeJs | "," JavaScript | "," HTML | "," Chakra_UI "],
             github:"https://github.com/Ravi-047/likeable-wrench-2860",
-            netlify:"https://brilliant-zabaione-7cd572.netlify.app"
+            netlify:"https://heroic-profiterole-6a5148.netlify.app/"
         }
     ]
 
